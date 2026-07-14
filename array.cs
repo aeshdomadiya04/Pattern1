@@ -23,6 +23,18 @@ namespace Pattern1
             {
                 Console.Write(a[i] + " ");
             }
+
+            //task 3 = find and print sum and avg of all elements
+            {
+                int sum = 0;
+                for (int j = 0; j < a.Length; j++)
+                {
+                    sum += a[j];
+                }
+                double avg = (double)sum / a.Length;
+                Console.WriteLine("\nSum of all elements: " + sum);
+                Console.WriteLine("Average of all elements: " + avg);
+            }
         }
     }
 }
