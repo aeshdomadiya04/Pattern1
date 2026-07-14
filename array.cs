@@ -27,13 +27,34 @@ namespace Pattern1
             //task 3 = find and print sum and avg of all elements
             {
                 int sum = 0;
-                for (int j = 0; j < a.Length; j++)
+                for (int i = 0; i < a.Length; i++)
                 {
-                    sum += a[j];
+                    sum = sum + a[i];
+                    Console.WriteLine(a[i]);
                 }
-                double avg = (double)sum / a.Length;
-                Console.WriteLine("\nSum of all elements: " + sum);
-                Console.WriteLine("Average of all elements: " + avg);
+                Console.WriteLine("Sum: " + sum);
+                float avg = sum / 5;
+                Console.WriteLine("Avg: " + avg);
+            }
+
+            // task 4 = find and print the min and max of all elements
+            {
+                int min = a[0];
+                int max = a[0];
+
+                for (int i = 1; i < a.Length; i++)
+                {
+                    if (a[i] < min)
+                    {
+                        min = a[i];
+                    }
+                    if (a[i] > max)
+                    {
+                        max = a[i];
+                    }
+                }
+                Console.WriteLine("Min: " + min);
+                Console.WriteLine("Max: " + max);
             }
         }
     }
