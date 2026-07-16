@@ -26,9 +26,6 @@ namespace Pattern1
             //pattern2.Pattern();
             //pattern.Pattern();
             //pattern3.Pattern();
-            //pattern4.Pattern();
-            //pattern5.Pattern();
-            array.Array();
         }
     }
 }
