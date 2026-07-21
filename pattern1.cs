@@ -24,8 +24,13 @@ namespace Pattern1
             //    Console.WriteLine();
             //}
             //pattern2.Pattern();
-            //pattern.Pattern();
+            //pattern1.Pattern();
             //pattern3.Pattern();
+            //pattern4.Pattern();
+            //pattern5.Pattern();
+            //array.Array();
+            //EVEN_ODD.eo();
+            Positive_Negative_Zero.pnz();
         }
     }
 }
