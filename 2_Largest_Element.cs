@@ -9,6 +9,27 @@ namespace Pattern1
         public static void Largest()
         {
             //2nd largest element in an array
+
+            //if 11>15
+            //Largest = 11
+            //else if 11>7 && 11<15
+            //secondlargest = 11
+            //...........
+            //largest = a[i],secondlargest = a[i]
+
+            //for()
+            //{
+            // if (largest > a[i])
+            //{
+            // largest = a[i];
+            //  _________
+            // }
+            //else if (largest < a[i] && secondlargest < a[i])
+            //{
+            // secondlargest = a[i];
+            //  }
+            // }
+
             int n, largest;
             int? secondlargest;
 
@@ -44,7 +65,7 @@ namespace Pattern1
                 }
             }
 
-            Console.WriteLine("\nLargest Element = " + largest);
+            //Console.WriteLine("\nLargest Element = " + largest);
             if (secondlargest.HasValue)
                 Console.WriteLine("Second Largest Element = " + secondlargest.Value);
             else
