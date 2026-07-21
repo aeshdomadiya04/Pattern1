@@ -30,7 +30,9 @@ namespace Pattern1
             //pattern5.Pattern();
             //array.Array();
             //EVEN_ODD.eo();
-            Positive_Negative_Zero.pnz();
+            //Positive_Negative_Zero.pnz();
+            //_2_Largest_Element.Largest();
+            _2_smallest_element.Smallest();
         }
     }
 }
