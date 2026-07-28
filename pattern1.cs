@@ -32,7 +32,11 @@ namespace Pattern1
             //EVEN_ODD.eo();
             //Positive_Negative_Zero.pnz();
             //_2_Largest_Element.Largest();
-            _2_smallest_element.Smallest();
+            //_2_smallest_element.Smallest();
+            //find_array_element.FindElement();
+            //count_occurence_given_element.CountOccurrence();
+            //find_first_occurrences_element.FindFirstOccurrence();
+            find_last_occurrence_element.FindLastOccurrence();
         }
     }
 }
