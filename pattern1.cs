@@ -36,7 +36,9 @@ namespace Pattern1
             //find_array_element.FindElement();
             //count_occurence_given_element.CountOccurrence();
             //find_first_occurrences_element.FindFirstOccurrence();
-            find_last_occurrence_element.FindLastOccurrence();
+            //find_last_occurrence_element.FindLastOccurrence();
+            //linear_search.LinearSearch();
+            //binary_search.BinarySearch();
         }
     }
 }
