@@ -15,6 +15,8 @@ namespace Pattern1
         public string Dept { get; set; }
 
         private double Salary;
+
+
         public void setSalary(double salary)
         {
             this.Salary = salary;
@@ -62,7 +64,7 @@ namespace Pattern1
             e1.Display();
 
             EmployeeDetails e2 = new EmployeeDetails();
-            e2.Name = "Dhara";
+            e2.Name = "dhara";
             e2.Age = 20;
             e2.Dept = "it";
             e2.setSalary(20000);

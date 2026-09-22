@@ -68,7 +68,7 @@ namespace Pattern1
 
             p2.Display();
 
-            Console.ReadLine();
+            Console.ReadLine(); 
         }
     }
 
