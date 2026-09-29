@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pattern1
+namespace project3
 {
     internal class EmployeeDetails  //blueprint or templete
 
@@ -14,7 +14,7 @@ namespace Pattern1
         private int age;
         public string Dept { get; set; }
 
-        private double Salary;
+        protected double Salary;
 
 
         public void setSalary(double salary)
@@ -38,7 +38,7 @@ namespace Pattern1
             }
         }
 
-        public void Display()
+        virtual public void Display()
         {
             Console.WriteLine("Name:" + Name);
             Console.WriteLine("Age:" + Age);
@@ -48,28 +48,88 @@ namespace Pattern1
 
         }
 
+        public void check()
+        {
+            Console.WriteLine("check method from RegularEmployee class");
+        }
+
 
     }
+
+    class RegulaerEmployee : EmployeeDetails   //level 1
+    {
+        //data member: from this class:1
+        //data mwember: from base class:3
+
+        //property: from this class:0
+        //property: from base class:1
+
+        //method: from this class:0
+        //method: from base class:3
+        private double Basic;
+        private double DA;
+        private double HRA;
+        private double PF;
+        private double PT;
+
+        public override void Display()
+        {
+            base.Display();
+            //-------------------
+            Console.WriteLine("Basic:" + Basic);
+            Console.WriteLine("DA:" + DA);
+            Console.WriteLine("HRA:" + HRA);
+            Console.WriteLine("PF:" + PF);
+            Console.WriteLine("PT:" + PT);
+        }
+        public new void check()
+        {
+            Console.WriteLine("check method from RegularEmployee class");
+        }
+
+        public void Test()
+        {
+            Console.WriteLine("Test method from RegularEmployee class");
+        }
+    }
+
+
 
     class Employee
     {
         public static void Main(string[] args)
         {
-            EmployeeDetails e1 = new EmployeeDetails();
-            e1.Name = "Aesh";
-            e1.Age = 20;
-            e1.Dept = "cse";
-            e1.setSalary(10000);
+            //EmployeeDetails e1 = new EmployeeDetails();
+            //e1.Name = "krishna";
+            //e1.Age = 20;
+            //e1.Dept = "cse";
+            //e1.setSalary(10000);
 
-            e1.Display();
+            //e1.Display();
 
-            EmployeeDetails e2 = new EmployeeDetails();
-            e2.Name = "dhara";
-            e2.Age = 20;
-            e2.Dept = "it";
-            e2.setSalary(20000);
+            //EmployeeDetails e2 = new EmployeeDetails();
+            //e2.Name = "dhara";
+            //e2.Age = 20;
+            //e2.Dept = "it";
+            //e2.setSalary(20000);
 
-            e2.Display();
+
+
+            //e2.Display();
+
+            EmployeeDetails e3 = new RegulaerEmployee();
+            e3.Display();//Employee
+            e3.check();//employee
+            //e3.Test();
+
+            RegulaerEmployee e4 = new RegulaerEmployee();
+            e4.Display();//RegularEmployee
+            e4.check();//RegularEmployee
+            e4.Test();//ok
+
+            EmployeeDetails e5 = new RegulaerEmployee();
+            e5.Display();//RegularEmployee
+            e5.check();//Employee
 
             Console.ReadLine();
         }
