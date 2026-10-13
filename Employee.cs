@@ -6,9 +6,23 @@ using System.Threading.Tasks;
 
 namespace project3
 {
-    internal class EmployeeDetails  //blueprint or templete
+    abstract class EmployeeDetails  //blueprint or templete
 
     {
+        // Abstract 
+        // highlights the features only
+        // abstract keyword used with class and method
+        // you can not create object of abstract class
+        // within abstract class, you can put data members, abstract method, non-abstract method, constructor, destructor, properties, indexers, events, and static members.
+        // you can use abstract class as a parent class 
+        // All the abstract methods must be implemented by its child class
+        // All abstract methods are implicitly virtual
+
+
+        // Interface
+        // what a class must do but not how it does
+
+        abstract public void Show();
         //data member
         public string Name { get; set; }
         private int age;
@@ -66,21 +80,26 @@ namespace project3
 
         //method: from this class:0
         //method: from base class:3
-        private double Basic;
-        private double DA;
-        private double HRA;
-        private double PF;
-        private double PT;
+        //private double Basic;
+        //private double DA;
+        //private double HRA;
+        //private double PF;
+        //private double PT;
 
         public override void Display()
         {
-            base.Display();
-            //-------------------
-            Console.WriteLine("Basic:" + Basic);
-            Console.WriteLine("DA:" + DA);
-            Console.WriteLine("HRA:" + HRA);
-            Console.WriteLine("PF:" + PF);
-            Console.WriteLine("PT:" + PT);
+            //base.Display();
+            ////-------------------
+            //Console.WriteLine("Basic:" + Basic);
+            //Console.WriteLine("DA:" + DA);
+            //Console.WriteLine("HRA:" + HRA);
+            //Console.WriteLine("PF:" + PF);
+            //Console.WriteLine("PT:" + PT);
+        }
+
+        public override void Show()
+        {
+            Console.WriteLine("Show method from RegularEmployee");
         }
         public new void check()
         {
