@@ -13,7 +13,7 @@ namespace project3
         // highlights the features only
         // abstract keyword used with class and method
         // you can not create object of abstract class
-        // within abstract class, you can put data members, abstract method, non-abstract method, constructor, destructor, properties, indexers, events, and static members.
+        // within abstract class, you can put data members, abstract method, non-abstract method, constructor etc.
         // you can use abstract class as a parent class 
         // All the abstract methods must be implemented by its child class
         // All abstract methods are implicitly virtual
@@ -21,6 +21,9 @@ namespace project3
 
         // Interface
         // what a class must do but not how it does
+        // it can not add data members, concrete methods
+        // All the methods are implicitly abstract and public
+        // A class must implement all the methods of an interface being implemented
 
         abstract public void Show();
         //data member
@@ -67,11 +70,62 @@ namespace project3
             Console.WriteLine("check method from RegularEmployee class");
         }
 
+        interface IA
+        {
+            void Test1();
+        }
+
+        interface IB
+        {
+            void Test1();
+            void Test2();
+            void Test3();
+        }
+
+        interface IC : IA, IB
+        {
+            void Test4();
+            void Test5();
+        }
+
+        class Employee1 : IC
+        {
+            public void Test1()
+            {
+                Console.WriteLine("Test1 method from Employee1 class");
+            }
+            public void Test2()
+            {
+                Console.WriteLine("Test2 method from Employee1 class");
+            }
+            public void Test3()
+            {
+                Console.WriteLine("Test3 method from Employee1 class");
+            }
+            public void Test4()
+            {
+                Console.WriteLine("Test4 method from Employee1 class");
+            }
+            public void Test5()
+            {
+                Console.WriteLine("Test5 method from Employee1 class");
+            }
+        }
+
+        interface ITest
+        {
+            void Test(); //abstract 
+        }
+
 
     }
 
-    class RegulaerEmployee : EmployeeDetails   //level 1
+    class RegulaerEmployee : EmployeeDetails, ITest  //level 1
     {
+        public void Testing()
+        {
+            Console.WriteLine("Testing method from RegularEmployee class");
+        }
         //data member: from this class:1
         //data mwember: from base class:3
 
